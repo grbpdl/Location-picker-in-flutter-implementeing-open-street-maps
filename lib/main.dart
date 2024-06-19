@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:location_picker_and_saver/saved_location_screen.dart';
+import 'package:location_picker_and_saver/location_info_screen.dart';
 
-void main() {
+import 'utils/shared_preference.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPrefs().init();
   runApp(const MainApp());
 }
 
@@ -12,7 +16,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: SavedLocation(),
+        body: LocationInfo(),
       ),
     );
   }
