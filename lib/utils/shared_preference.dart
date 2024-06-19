@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:latlong2/latlong.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:latlong2/latlong.dart'
+    as coordinates; // Import LatLng class with alias
 
 class SharedPrefs {
   late final SharedPreferences _sharedPrefs;
@@ -58,5 +58,5 @@ class SimpleLocationResult {
     };
   }
 
-  // coordinates.LatLng getLatLng() => coordinates.LatLng(latitude, longitude);
+  coordinates.LatLng getLatLng() => coordinates.LatLng(latitude, longitude);
 }
